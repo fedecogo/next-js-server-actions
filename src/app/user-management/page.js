@@ -8,13 +8,13 @@ async function UserManagement() {
 
   console.log(getListOfUsers);
 
-  return (
+  return ( <UserState>
     <div className="p-20 max-w-6xl">
       <div className="flex justify-between">
         <h1>User Management</h1>
-        <UserState>
+       
          <AddNewUser />
-        </UserState>
+       
       </div>
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {getListOfUsers.data &&
@@ -26,7 +26,7 @@ async function UserManagement() {
           <h3>No users found! Please create one</h3>
         )}
       </div>
-    </div>
+    </div> </UserState>
   );
 }
 
